@@ -1,0 +1,14 @@
+{
+  "name": "dz-boutique-sistema-criativo",
+  "private": true,
+  "type": "module",
+  "description": "Sistema criativo da Dz Boutique Imobiliária: marca, modelos de peças e skills para o Claude Code.",
+  "scripts": {
+    "exportar": "node ferramentas/exportar.mjs",
+    "verificar": "node ferramentas/exportar.mjs --verificar",
+    "instalar-navegador": "npx playwright install chromium"
+  },
+  "dependencies": {
+    "playwright": "^1.48.0"
+  }
+}

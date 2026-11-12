@@ -1,0 +1,44 @@
+/* Dz Boutique Imobiliária · tokens da marca
+   Fonte da verdade: DESIGN.md. Mudou lá, muda aqui. Nada de cor ou fonte solta nas peças: use var(--nome). */
+
+@font-face { font-family: "Cormorant Garamond"; src: url(fontes/CormorantGaramond-Light.ttf); font-weight: 300; }
+@font-face { font-family: "Cormorant Garamond"; src: url(fontes/CormorantGaramond-LightItalic.ttf); font-weight: 300; font-style: italic; }
+@font-face { font-family: "Cormorant Garamond"; src: url(fontes/CormorantGaramond-Regular.ttf); font-weight: 400; }
+@font-face { font-family: "Cormorant Garamond"; src: url(fontes/CormorantGaramond-Italic.ttf); font-weight: 400; font-style: italic; }
+@font-face { font-family: "Cormorant Garamond"; src: url(fontes/CormorantGaramond-Medium.ttf); font-weight: 500; }
+@font-face { font-family: "Fahkwang"; src: url(fontes/Fahkwang-Light.ttf); font-weight: 300; }
+@font-face { font-family: "Fahkwang"; src: url(fontes/Fahkwang-Regular.ttf); font-weight: 400; }
+@font-face { font-family: "Fahkwang"; src: url(fontes/Fahkwang-Medium.ttf); font-weight: 500; }
+@font-face { font-family: "Pinyon Script"; src: url(fontes/PinyonScript-Regular.ttf); font-weight: 400; }
+
+:root {
+  /* Cores: vêm do território (mar, relevo, areia, luz) */
+  --cagarras: #0D1733;   /* o "preto" da marca: fundo escuro e texto sobre Areia */
+  --atlantico: #16295A;
+  --ultramar: #243F85;
+  --relevo: #5B74B4;
+  --bruma: #A7B4CE;      /* texto secundário e metadados no escuro */
+  --areia: #E9DCC6;      /* o "branco" da marca: fundo claro e texto sobre Cagarras */
+  --papel: #EEE6D8;
+  --arpoador: #C9A96E;   /* ouro: só linha, letra de destaque e monograma */
+  --ouro-claro: #DCC293;
+  --ouro-escuro: #B48F55;
+  --ouro: linear-gradient(135deg, var(--ouro-claro), var(--ouro-escuro));
+
+  /* Fontes: três vozes */
+  --serifa: "Cormorant Garamond", serif;   /* títulos e frases de destaque */
+  --sans: "Fahkwang", sans-serif;          /* textos, metadados, bairros em caixa alta */
+  --script: "Pinyon Script", cursive;      /* só nomes de água no mapa */
+
+  /* Medidas para 1080 px de largura (feed 1080x1350, stories 1080x1920) */
+  --margem: 90px;          /* respiro lateral do conteúdo */
+  --moldura: 36px;         /* distância do fio de moldura até a borda */
+  --respiro-logo: 96px;    /* espaço mínimo entre qualquer texto e o logo do rodapé */
+  --titulo-xl: 112px;
+  --titulo-l: 84px;
+  --titulo-m: 64px;
+  --texto: 30px;
+  --meta: 19px;            /* rótulos de canto em caixa alta */
+  --entrelinha-titulo: 1.04;
+  --tracking-meta: .24em;
+}

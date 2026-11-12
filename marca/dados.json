@@ -1,0 +1,45 @@
+{
+ "empresa": {
+  "nome": "Dz Boutique Imobiliária",
+  "rua": "Rua Visconde de Pirajá, nº 330, Sala 809",
+  "bairro": "Ipanema/RJ",
+  "cep": "CEP 22410-000",
+  "tel": "21 96710-2173",
+  "email": "contato@dzboutiqueimobiliaria.com.br",
+  "site": "www.dzboutiqueimobiliaria.com.br",
+  "instagram": "www.instagram.com/dzboutiqueimobiliaria",
+  "arroba": "@dzboutiqueimobiliaria"
+ },
+ "pessoas": [
+  {
+   "slug": "cristiane-blanco",
+   "nome": "Cristiane Blanco",
+   "cargo": "Consultora Imobiliária",
+   "email": "cristiane.blanco@dzboutiqueimobiliaria.com.br",
+   "tel": "21 98147-6000",
+   "creci": "42726"
+  },
+  {
+   "slug": "aline-mabel",
+   "nome": "Aline Mabel",
+   "cargo": "Consultora Imobiliária",
+   "email": "aline.mabel@dzboutiqueimobiliaria.com.br",
+   "tel": "21 99737-6033",
+   "creci": "047134"
+  },
+  {
+   "slug": "danielle-datz",
+   "nome": "Danielle Datz",
+   "cargo": "Founder & CEO",
+   "email": "contato@dzboutiqueimobiliaria.com.br",
+   "tel": "21 99703-0104"
+  },
+  {
+   "slug": "pedro-almeida",
+   "nome": "Pedro Almeida",
+   "cargo": "Analista de Growth MKT",
+   "email": "contato@dzboutiqueimobiliaria.com.br",
+   "tel": "21 98358-7712"
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+/* Dz Boutique Imobiliária · componentes das peças
+   Use estas classes nas peças em pecas/. Cada slide ou post é um <section class="peca">. */
+@import url(tokens.css);
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #222; -webkit-font-smoothing: antialiased; display: flex; flex-direction: column; gap: 40px; padding: 40px; align-items: flex-start; }
+
+/* ---------- peça ---------- */
+.peca { position: relative; width: 1080px; height: 1350px; overflow: hidden; background: var(--cagarras); color: var(--areia); font-family: var(--sans); font-weight: 300; }
+.peca.stories { height: 1920px; }
+.peca.quadrado { height: 1080px; }
+.peca.claro { background: var(--areia); color: var(--cagarras); }
+
+/* ---------- fundos ---------- */
+/* Fundo 3D: o render de relevo azul. É o fundo tridimensional da marca. Nunca use curvas de nível chapadas ou mapa no lugar dele. */
+.fundo-3d { position: absolute; inset: 0; background: url(fundos/relevo-3d.jpg) 50% 45% / cover no-repeat; }
+.fundo-3d::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 75% 65% at 40% 55%, rgba(13,23,51,.62), rgba(13,23,51,.25) 75%, rgba(13,23,51,.5)); }
+.foto { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.foto.escurecida::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13,23,51,.25) 0%, rgba(13,23,51,0) 22%, rgba(13,23,51,.1) 42%, rgba(13,23,51,.82) 66%, rgba(13,23,51,.95)); }
+.stories .foto.escurecida::after { background: linear-gradient(180deg, rgba(13,23,51,.3) 0%, rgba(13,23,51,0) 18%, rgba(13,23,51,.15) 36%, rgba(13,23,51,.85) 55%, rgba(13,23,51,.95)); }
+
+/* Monograma grande como textura: cortado na borda, tom sobre tom. */
+.textura-monograma { position: absolute; right: -180px; top: 40px; width: 900px; opacity: .1; pointer-events: none; }
+.claro .textura-monograma { opacity: .14; }
+
+/* ---------- moldura e cantos ---------- */
+.moldura { position: absolute; inset: var(--moldura); border: 1px solid rgba(201,169,110,.45); pointer-events: none; }
+.claro .moldura { border-color: rgba(180,143,85,.5); }
+.meta { position: absolute; top: 96px; font-family: var(--sans); font-size: var(--meta); letter-spacing: var(--tracking-meta); text-transform: uppercase; color: var(--bruma); font-weight: 400; }
+.meta.esq { left: var(--margem); }
+.meta.dir { right: var(--margem); }
+.claro .meta { color: var(--ouro-escuro); }
+
+/* ---------- texto ---------- */
+.conteudo { position: absolute; left: var(--margem); right: var(--margem); }
+.titulo { font-family: var(--serifa); font-weight: 300; font-size: var(--titulo-l); line-height: var(--entrelinha-titulo); letter-spacing: -.005em; }
+.titulo.xl { font-size: var(--titulo-xl); }
+.titulo.m { font-size: var(--titulo-m); }
+.titulo em, .destaque { font-style: italic; color: var(--arpoador); }
+.claro .titulo em, .claro .destaque { color: var(--ouro-escuro); }
+.texto { font-size: var(--texto); line-height: 1.55; font-weight: 300; max-width: 760px; }
+.bairro { font-family: var(--sans); font-size: var(--meta); letter-spacing: var(--tracking-meta); text-transform: uppercase; font-weight: 400; }
+.bairro::before { content: "◆"; color: var(--arpoador); margin-right: .7em; font-size: .8em; }
+.fio { width: 72px; height: 1px; background: var(--arpoador); margin: 44px 0; }
+
+/* lista com divisórias (equipe, ficha do imóvel) */
+.lista > * { padding: 26px 0; border-top: 1px solid rgba(167,180,206,.25); }
+.lista > *:last-child { border-bottom: 1px solid rgba(167,180,206,.25); }
+.lista .nome { font-family: var(--serifa); font-size: 46px; font-weight: 300; }
+.lista .cargo { font-size: 15px; letter-spacing: var(--tracking-meta); text-transform: uppercase; color: var(--bruma); margin-top: 8px; }
+
+/* ---------- rodapé ---------- */
+/* O logo do rodapé fica sempre no mesmo lugar e tem respiro de --respiro-logo para qualquer texto (o verificar confere). */
+.logo-rodape { position: absolute; left: var(--margem); bottom: 104px; height: 64px; }
+.arraste { position: absolute; right: var(--margem); bottom: 122px; font-size: 15px; letter-spacing: var(--tracking-meta); text-transform: uppercase; color: var(--bruma); }
+.marca-dagua { position: absolute; right: 64px; top: 64px; width: 64px; opacity: .72; }
