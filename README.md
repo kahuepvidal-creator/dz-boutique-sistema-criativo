@@ -5,7 +5,7 @@ Tudo o que a marca precisa para criar peças com o Claude Code: as regras da mar
 ## Como começar (uma vez por computador)
 
 1. Baixe o repositório do GitHub (você precisa ter sido convidado como colaborador). No Claude Code, abra uma conversa e peça: **"clona o repositório dz-boutique-sistema-criativo em Documentos"**, ou no terminal:
-   `git clone https://github.com/<conta>/dz-boutique-sistema-criativo.git`
+   `git clone https://github.com/kahuepvidal-creator/dz-boutique-sistema-criativo.git`
    (Sem git? Baixe o zip pelo botão verde "Code" > "Download ZIP" e descompacte em um lugar fixo.)
 2. Instale o **Claude Code** (app do Claude para desktop, aba Code, ou o terminal) e entre com a conta da Dz.
 3. Abra esta pasta no Claude Code.
