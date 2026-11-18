@@ -4,12 +4,13 @@ Tudo o que a marca precisa para criar peças com o Claude Code: as regras da mar
 
 ## Como começar (uma vez por computador)
 
-1. Baixe o repositório do GitHub (você precisa ter sido convidado como colaborador). No Claude Code, abra uma conversa e peça: **"clona o repositório dz-boutique-sistema-criativo em Documentos"**, ou no terminal:
-   `git clone https://github.com/kahuepvidal-creator/dz-boutique-sistema-criativo.git`
-   (Sem git? Baixe o zip pelo botão verde "Code" > "Download ZIP" e descompacte em um lugar fixo.)
-2. Instale o **Claude Code** (app do Claude para desktop, aba Code, ou o terminal) e entre com a conta da Dz.
-3. Abra esta pasta no Claude Code.
-4. Na primeira conversa, peça: **"prepara o sistema nesta máquina"**. O Claude roda `npm install` (precisa do Node.js instalado; se não tiver, ele explica como instalar) e confere se as peças exportam.
+Passo a passo completo, para quem nunca usou GitHub nem Claude: **[guias/primeiros-passos.md](guias/primeiros-passos.md)**. Em resumo:
+
+1. Crie uma conta no GitHub e mande o seu usuário para ser convidado como colaborador. Aceite o convite no e-mail.
+2. Instale o app do Claude (claude.ai/download, plano pago) e use a aba **Code**.
+3. Instale o **GitHub Desktop** (desktop.github.com), entre com a conta do GitHub e clone `dz-boutique-sistema-criativo` em Documentos.
+   (Quem usa terminal: `git clone https://github.com/kahuepvidal-creator/dz-boutique-sistema-criativo.git`)
+4. Abra esta pasta no Claude e peça: **"prepara o sistema nesta máquina"**. O Claude roda `npm install` (precisa do Node.js; se não tiver, ele explica como instalar) e confere se as peças exportam.
 
 ## Como usar no dia a dia
 
@@ -47,7 +48,9 @@ Para abrir as peças em outros programas (Canva, CapCut, Word), instale as fonte
 
 ## Manter todo mundo atualizado
 
-O repositório no GitHub é a versão oficial. Antes de começar o dia, peça ao Claude **"atualiza o sistema"** (ele roda `git pull`). Quando uma regra, um logo ou um modelo mudar, peça **"salva e sobe as mudanças do sistema"** (ele faz o commit e o `git push`). Assim o time inteiro usa o mesmo selo, os mesmos dados e as mesmas regras.
+O repositório no GitHub é a versão oficial. Antes de começar o dia, clique em **Fetch origin** (e em **Pull origin**, se aparecer) no GitHub Desktop. Quem tem git configurado no terminal também pode pedir ao Claude **"atualiza o sistema"** (`git pull`).
+
+Quando uma regra, um logo, um dado ou um modelo mudar, **uma pessoa responsável** sobe a mudança: no GitHub Desktop, escreve um resumo, clica em **Commit to main** e depois em **Push origin**. Assim o time inteiro usa o mesmo selo, os mesmos dados e as mesmas regras.
 
 ## Quando algo der errado
 
