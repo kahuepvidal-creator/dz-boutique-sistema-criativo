@@ -1,6 +1,6 @@
 ---
 marca: Dz Boutique Imobiliária
-versao: 2026-11-12
+versao: 2026-11-18
 cores:
   cagarras: "#0D1733"    # fundo escuro e texto sobre Areia. Substitui o preto.
   atlantico: "#16295A"
@@ -36,7 +36,9 @@ A regra da marca para quem cria peças (gente ou IA). Os valores do topo estão 
 
 ## A marca em uma frase
 
-Uma boutique imobiliária da Zona Sul do Rio: escolhe poucos imóveis, atende de perto e domina um território pequeno e muito desejado (Leblon, Ipanema, Lagoa, Copacabana, Jardim Botânico e Gávea).
+Uma boutique imobiliária da Zona Sul do Rio: escolhe poucos imóveis, atende de perto e domina um território pequeno e muito desejado (Leblon, Ipanema, Lagoa, Orla, Jardim Botânico e Gávea).
+
+- **Orla, não Copacabana.** Nas peças da marca o bairro se chama **Orla** (lista de bairros, mapas, etiquetas de bairro, link da bio). Na ficha técnica do imóvel o endereço continua com o bairro oficial.
 
 - **Fala com:** famílias e investidores que procuram apartamento ou cobertura de alto padrão nesses seis bairros. Já viram muitos anúncios e desconfiam do excesso.
 - **O que esperam:** curadoria em vez de volume, um corretor que conhece a quadra, o prédio e a vista, discrição e material à altura do imóvel.
@@ -46,6 +48,7 @@ Uma boutique imobiliária da Zona Sul do Rio: escolhe poucos imóveis, atende de
 
 - Sempre **Dz Boutique Imobiliária**, com o **z minúsculo**. Nunca "DZ", "Dz Imob" ou só "Dz Boutique" no nome por extenso.
 - Instagram: **@dzboutiqueimobiliaria** · site: **dzboutiqueimobiliaria.com.br** · WhatsApp: **21 96710-2173**.
+- CRECI da empresa: **008710-F-RJ** (rodapé de placa e peças institucionais). O CRECI de cada corretor fica em `marca/dados.json`.
 - Contatos e equipe (com CRECI) estão em `marca/dados.json`. Use de lá, nunca de memória.
 
 ## Assinatura (logo)
@@ -61,10 +64,30 @@ Arquivos em `marca/logos/svg/` (vetor) e `marca/logos/png/` (selo em PNG transpa
 | Selo | `dz-boutique-selo-*.svg` | avatar, certificado de imóvel exclusivo, capa de proposta |
 
 - **Contraste:** no fundo escuro, logo **dourado-areia** (monograma dourado, nome em Areia). No fundo claro, **dourado-escuro-cagarras**. Nunca logo dourado claro sobre Areia nem Cagarras sobre foto escura.
-- **O selo** é o monograma com "Dz BOUTIQUE IMOBILIÁRIA" na metade de cima do círculo e um filete com losango fechando embaixo. Não tem mais "Rio de Janeiro". Use só os arquivos prontos; não recrie o selo.
+- **O selo** é o monograma com "Dz BOUTIQUE IMOBILIÁRIA" na metade de cima do círculo e, embaixo, um filete com o **losango duplo** (losango vazado com losango cheio dentro) sentado sobre ele. O filete para antes das pontas do losango e nada encosta no anel nem no monograma. Não tem mais "Rio de Janeiro". Use só os arquivos prontos; não recrie nem redimensione o elemento.
 - **Monograma:** D maiúsculo serifado com o z minúsculo cursivo atravessando. É a única peça que leva brilho (ouro). Não redesenhe, não distorça, não troque a cor do D e do z separadamente.
 - **Respiro:** em volta do logo, no mínimo a altura do D. Abaixo de 48 px, use só o símbolo, sem o nome.
 - **No rodapé:** o logo fica sempre no mesmo lugar (`.logo-rodape`) e **nenhum texto chega a menos de 96 px dele**. O `npm run verificar` confere isso. Se o título não couber, suba o título ou diminua o texto; nunca encoste no logo.
+
+## Elementos gráficos
+
+Arquivos em `marca/icones/`.
+
+- **Losango duplo** (`elemento-losango-duplo.svg`): o elemento do selo. Usado sozinho nas capas de destaque do Instagram, como marcador e como fecho de peça.
+- **Ondas** (`elemento-ondas.svg`): só no destaque "Sobre". Não usar como fundo.
+- **Destaques do Instagram:** todos com o losango duplo dentro de um círculo fino dourado sobre o fundo 3D; o "Sobre" leva as ondas. As capas não têm texto, então servem para qualquer nome de destaque.
+
+## Contatos com ícones
+
+- Ícones dourados de `marca/icones/` (`ic-*-claro.svg` no escuro, `ic-*.svg` no claro), do mesmo tamanho, alinhados numa coluna, com o texto em Fahkwang Light. É o estilo da assinatura de e-mail.
+- **Ordem:** redes primeiro (Instagram, site), depois telefone/WhatsApp e e-mail, **endereço por último**.
+- Se tiver símbolo Dz em cima do bloco, ele fica **alinhado à esquerda com os ícones**, não centralizado na página.
+
+## Papelaria
+
+- **Cartão de visita, verso:** cargo logo abaixo do nome; telefone, e o e-mail menor que o telefone; no bloco de baixo, site e @ primeiro e o endereço por último.
+- **Cartão virtual:** círculo branco no topo para a foto da pessoa, texto alinhado à esquerda, botões redondos clicáveis (WhatsApp, Instagram, site, e-mail). Sem logo no topo e sem fio divisor; o logo vai só no rodapé.
+- **Placa VENDE-SE:** rodapé com "Dz Boutique Imobiliária · CRECI 008710-F-RJ". Sem CNPJ e sem "aponte a câmera".
 
 ## Cores
 

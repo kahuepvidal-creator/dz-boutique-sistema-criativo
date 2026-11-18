@@ -7,7 +7,7 @@ Peça em uma frase. O Claude pergunta só o que faltar.
 - "Faz um carrossel sobre por que a gente trabalha só com seis bairros."
 - "Imóvel novo: AP0050 em Ipanema, fotos na pasta X, ficha abaixo. Quero carrossel e 3 stories."
 - "Stories avisando que temos 3 imóveis novos no Leblon esta semana."
-- "Legenda para o post da cobertura de Copacabana."
+- "Legenda para o post da cobertura na Orla."
 - "Vídeo do imóvel CO0002 para o ZAP, fotos na pasta X."
 
 ## O que o Claude precisa saber (e pergunta se faltar)

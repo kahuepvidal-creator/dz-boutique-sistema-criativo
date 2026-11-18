@@ -43,6 +43,7 @@ Pasta com tudo o que a Dz Boutique Imobiliária produz para a marca: posts e car
 - Nunca inventar metragem, preço, quartos, endereço, CRECI ou depoimento. Texto do anúncio é da equipe: copie igual. Se você escrever algum texto, avise.
 - Foto de abertura do imóvel é a mais forte (terraço, mar, sala com luz). Nada de rua ou fachada na abertura. Nunca foto com decoração por IA.
 - Sem travessão (—) no texto das peças.
+- Nas peças de marca o bairro é **Orla**, não Copacabana. CRECI da empresa: 008710-F-RJ (em `marca/dados.json`).
 - Todo erro corrigido vira regra: no `DESIGN.md` se é da marca, na skill se é do formato, e entra em "Erros que já aconteceram" no `guias/checklist.md`.
 - Peça aprovada vai para `exemplos/`.
 
