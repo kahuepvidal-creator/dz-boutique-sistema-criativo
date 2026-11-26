@@ -31,3 +31,4 @@ Rode `npm run exportar -- <peça>` e só siga com "Conferência: tudo ok". Depoi
 - **Elemento do selo encostando no anel** (17/11/2026). O losango duplo ficou grande demais e a ponta tocou o anel. O selo certo é o de `marca/logos/`: elemento pequeno sobre o filete, com folga de tudo.
 - **Símbolo centralizado e informações alinhadas à esquerda** (fundo da caixa e contracapa da pasta, 17/11/2026). Ficou sem coerência. Símbolo e informações formam um só bloco, alinhados pela mesma borda.
 - **Copacabana nas peças** (17/11/2026). A marca usa "Orla" no lugar de Copacabana.
+- **Tarja azul dura no criativo de campanha** (24/11/2026). A faixa azul sólida sobre a foto ficou pesada e a campanha não saiu. O anúncio usa a caixa Areia com textura (skill `anuncio-meta`), e só o card 1 tem texto.

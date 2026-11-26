@@ -53,7 +53,8 @@ Pasta com tudo o que a Dz Boutique Imobiliária produz para a marca: posts e car
 | Skill | Quando usar |
 |---|---|
 | `posts-carrossel` | post ou carrossel de marca para o feed (frase, quem somos, bairro, dicas) |
-| `anuncio-imovel` | imóvel novo: carrossel do feed + stories a partir das fotos e da ficha |
+| `anuncio-imovel` | imóvel novo: carrossel do feed + stories a partir das fotos e da ficha (post orgânico) |
+| `anuncio-meta` | anúncio pago (Meta Ads): carrossel 4:5, quadrado e stories, capa com caixa Areia e preço |
 | `stories` | stories avulsos (imóvel, bairro, frase) |
 | `legenda` | legenda de Instagram na voz da Dz |
 | `video-imovel` | vídeo 16:9 do imóvel para o ZAP/YouTube a partir das fotos |

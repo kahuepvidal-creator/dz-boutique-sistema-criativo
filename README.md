@@ -19,6 +19,7 @@ Peça em uma frase, como para um designer:
 - "Faz um carrossel sobre por que a gente trabalha só com seis bairros."
 - "Imóvel novo: AP0050 em Ipanema. As fotos estão nesta pasta e a ficha é esta. Quero carrossel e stories."
 - "Stories avisando que temos 3 imóveis novos no Leblon."
+- "Anúncio para o Meta Ads do CO0015 na Orla, com estas fotos e esta ficha. Preço R$ ..."
 - "Escreve a legenda do post da cobertura na Orla."
 - "Vídeo do imóvel CO0002 para o ZAP."
 
@@ -40,7 +41,7 @@ O Claude lê o `DESIGN.md`, usa a skill certa, exporta as imagens em `export/` e
 | `exemplos/` | peças aprovadas, que servem de régua de qualidade |
 | `guias/` | como pedir e checklist de entrega |
 | `materiais/` | o guia de marca completo em PDF |
-| `.claude/skills/` | as skills: posts e carrossel, anúncio de imóvel, stories, legenda, vídeo de imóvel, nova skill |
+| `.claude/skills/` | as skills: posts e carrossel, anúncio de imóvel, anúncio pago (Meta Ads), stories, legenda, vídeo de imóvel, nova skill |
 
 ## Para editar as fontes no computador
 

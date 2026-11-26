@@ -16,6 +16,7 @@ Peça em uma frase. O Claude pergunta só o que faltar.
 |---|---|
 | Anúncio de imóvel | código, bairro, rua (ou referência), tipologia e metragem **como no anúncio**, fotos |
 | Carrossel de marca | o tema e, se tiver, o texto. Se ele escrever o texto, avisa |
+| Anúncio pago (Meta Ads) | bairro, tipologia, metragem, suítes e vagas como na ficha, as fotos e o preço (se for entrar) |
 | Stories | o que anunciar e para quem direcionar (WhatsApp, link, perfil) |
 | Vídeo de imóvel | as mesmas informações do anúncio + a música escolhida (arquivo .mp3) |
 

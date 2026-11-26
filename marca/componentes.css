@@ -90,6 +90,30 @@ body { background: #222; -webkit-font-smoothing: antialiased; display: flex; fle
 .etiqueta .tipo { font-family: var(--sans); font-size: 44px; font-weight: 400; margin-top: 14px; }
 .etiqueta .linha { font-family: var(--sans); font-size: var(--texto-apoio); font-weight: 400; letter-spacing: .06em; text-transform: uppercase; margin-top: 14px; opacity: .92; }
 
+/* ---------- anúncio (Meta Ads) ---------- */
+/* Caixa da informação do imóvel: Areia com a textura de curvas, sobre a foto. Só no 1º card.
+   Variações: .topo (caixa em cima), .flutuante (cartão solto com margem), .azul (azul-claro). */
+.caixa-anuncio { position: absolute; left: 0; right: 0; bottom: 0; padding: 64px var(--margem) 72px; background: var(--areia); color: var(--cagarras); }
+.caixa-anuncio::before { content: ""; position: absolute; inset: 0; background: url(fundos/textura-curvas-areia-retrato.svg) 50% 70% / cover no-repeat; pointer-events: none; }
+.caixa-anuncio.azul { background: var(--brisa); }
+.caixa-anuncio.azul::before { background-image: url(fundos/textura-curvas-cagarras-retrato.svg); }
+.caixa-anuncio.topo { top: 0; bottom: auto; padding-top: 96px; }
+.caixa-anuncio.flutuante { left: 56px; right: 56px; bottom: 56px; padding: 56px 64px 60px; border-radius: 6px; overflow: hidden; }
+.caixa-anuncio > * { position: relative; }
+.caixa-anuncio .bairro { color: var(--ouro-escuro); }
+.caixa-anuncio .bairro::before { color: var(--ouro-escuro); }
+.caixa-anuncio .tipo { font-family: var(--serifa); font-weight: 400; font-size: 80px; line-height: 1.02; letter-spacing: -.005em; margin-top: 18px; }
+.caixa-anuncio .tipo em { font-style: italic; color: var(--ouro-escuro); }
+.caixa-anuncio .linha { font-family: var(--sans); font-size: 28px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; margin-top: 22px; }
+.caixa-anuncio .base { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-top: 36px; padding-top: 30px; border-top: 1px solid rgba(180,143,85,.5); }
+.caixa-anuncio .rotulo { font-family: var(--sans); font-size: 20px; font-weight: 500; letter-spacing: var(--tracking-meta); text-transform: uppercase; color: var(--ouro-escuro); }
+.caixa-anuncio .preco { font-family: var(--sans); font-size: 40px; font-weight: 500; margin-top: 6px; }
+.caixa-anuncio .botao-contorno { padding: 20px 32px; font-size: 24px; }
+.quadrado .caixa-anuncio { padding: 48px var(--margem) 72px; }
+.quadrado .caixa-anuncio .tipo { font-size: 64px; }
+/* Mosquinha escura, para quando ela fica sobre Areia (caixa em cima). */
+.marca-dagua.escura { opacity: 1; }
+
 /* ---------- rodapé ---------- */
 /* O logo do rodapé fica sempre no mesmo lugar e tem respiro de --respiro-logo para qualquer texto (o verificar confere). */
 .logo-rodape { position: absolute; left: var(--margem); bottom: 104px; height: 64px; }
