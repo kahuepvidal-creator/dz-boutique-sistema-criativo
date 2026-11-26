@@ -37,8 +37,10 @@
   --titulo-xl: 112px;
   --titulo-l: 84px;
   --titulo-m: 64px;
-  --texto: 30px;
-  --meta: 19px;            /* rótulos de canto em caixa alta */
+  --texto: 34px;           /* texto corrido: público de 40 a 60+ anos, nunca menor que 28px */
+  --texto-apoio: 28px;     /* legenda, crédito de foto, linha de tipologia */
+  --meta: 22px;            /* rótulos de canto em caixa alta (mínimo 20px) */
+  --titulo-editorial: 150px; /* título de revista: capa editorial */
   --entrelinha-titulo: 1.04;
   --tracking-meta: .24em;
 }

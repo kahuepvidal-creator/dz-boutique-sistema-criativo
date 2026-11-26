@@ -10,6 +10,16 @@ body { background: #222; -webkit-font-smoothing: antialiased; display: flex; fle
 .peca.stories { height: 1920px; }
 .peca.quadrado { height: 1080px; }
 .peca.claro { background: var(--areia); color: var(--cagarras); }
+/* Textura da marca: curvas de nível finas, tom sobre tom. Entra sozinha em toda peça clara.
+   Para tirar numa tela específica: class="peca claro lisa". */
+.peca.claro::before, .textura-curvas::before { content: ""; position: absolute; inset: 0; background: url(fundos/textura-curvas-areia-retrato.svg) center / cover no-repeat; pointer-events: none; }
+.peca.claro.lisa::before { display: none; }
+.peca.quadrado.claro::before { background-position: 50% 30%; }
+/* Em caixa ou bloco (ex.: caixa do título no anúncio): <div class="caixa-areia textura-curvas">. */
+.textura-curvas { position: relative; }
+.textura-curvas > * { position: relative; }
+/* No escuro, só quando pedirem: <div class="textura-escura"></div> dentro da peça. */
+.textura-escura { position: absolute; inset: 0; background: url(fundos/textura-curvas-cagarras-retrato.svg) center / cover no-repeat; pointer-events: none; }
 
 /* ---------- fundos ---------- */
 /* Fundo 3D: o render de relevo azul. É o fundo tridimensional da marca. Nunca use curvas de nível chapadas ou mapa no lugar dele. */
@@ -47,10 +57,42 @@ body { background: #222; -webkit-font-smoothing: antialiased; display: flex; fle
 .lista > * { padding: 26px 0; border-top: 1px solid rgba(167,180,206,.25); }
 .lista > *:last-child { border-bottom: 1px solid rgba(167,180,206,.25); }
 .lista .nome { font-family: var(--serifa); font-size: 46px; font-weight: 300; }
-.lista .cargo { font-size: 15px; letter-spacing: var(--tracking-meta); text-transform: uppercase; color: var(--bruma); margin-top: 8px; }
+.lista .cargo { font-size: 20px; letter-spacing: var(--tracking-meta); text-transform: uppercase; color: var(--bruma); margin-top: 8px; }
+
+/* ---------- editorial (Casa Vogue) ---------- */
+/* Sobrelinha: fio curto dourado + rótulo em caixa alta, antes do título. */
+.sobrelinha { display: flex; align-items: center; gap: 22px; font-family: var(--sans); font-size: var(--meta); font-weight: 400; letter-spacing: var(--tracking-meta); text-transform: uppercase; color: var(--ouro-escuro); }
+.sobrelinha::before { content: ""; width: 56px; height: 1px; background: currentColor; }
+.peca:not(.claro) .sobrelinha { color: var(--arpoador); }
+/* Título de revista: enorme, entrelinha curta, pode ter uma foto encaixada entre as linhas (.foto-bloco). */
+.titulo-editorial { font-family: var(--serifa); font-weight: 300; font-size: var(--titulo-editorial); line-height: .98; letter-spacing: -.015em; }
+.titulo-editorial em { font-style: italic; color: var(--ouro-escuro); }
+.peca:not(.claro) .titulo-editorial em { color: var(--arpoador); }
+.foto-bloco { display: block; object-fit: cover; border-radius: 6px; }
+/* Parágrafo de revista: serifa grande, uma palavra em itálico dourado. */
+.paragrafo-editorial { font-family: var(--serifa); font-weight: 400; font-size: 52px; line-height: 1.22; }
+.paragrafo-editorial em { font-style: italic; color: var(--ouro-escuro); }
+/* Crédito de foto, como em revista: pequeno, caixa alta, no pé da foto. */
+.credito { font-family: var(--sans); font-size: var(--meta); font-weight: 400; letter-spacing: .18em; text-transform: uppercase; color: var(--areia); }
+/* Aspas grandes (fala da Dani, depoimento real). */
+.aspas { font-family: var(--serifa); font-weight: 300; font-size: 96px; line-height: 1.04; }
+.aspas::before { content: "\201C"; } .aspas::after { content: "\201D"; }
+.aspas em { font-style: italic; color: var(--arpoador); }
+.assinatura-fala { font-family: var(--sans); font-size: var(--meta); letter-spacing: var(--tracking-meta); text-transform: uppercase; color: var(--bruma); margin-top: 48px; }
+/* Número de coleção ou de passo: ◆ 01 */
+.numero { font-family: var(--sans); font-size: var(--meta); font-weight: 400; letter-spacing: .12em; }
+.numero::before { content: "◇"; color: var(--arpoador); margin-right: .6em; }
+/* Botão em contorno (nunca preenchido): "Ver imóveis →", "Fale com a gente →" */
+.botao-contorno { display: inline-flex; align-items: center; gap: 18px; padding: 24px 40px; border: 1.5px solid currentColor; border-radius: 4px; font-family: var(--sans); font-size: 26px; font-weight: 500; letter-spacing: .02em; }
+.botao-contorno::after { content: "→"; }
+/* Etiqueta do imóvel no padrão do site: ◆ BAIRRO / título / 130 M² • 3 DORMS • 2 VAGAS */
+.etiqueta .bairro { color: var(--arpoador); }
+.etiqueta .tipo { font-family: var(--sans); font-size: 44px; font-weight: 400; margin-top: 14px; }
+.etiqueta .linha { font-family: var(--sans); font-size: var(--texto-apoio); font-weight: 400; letter-spacing: .06em; text-transform: uppercase; margin-top: 14px; opacity: .92; }
 
 /* ---------- rodapé ---------- */
 /* O logo do rodapé fica sempre no mesmo lugar e tem respiro de --respiro-logo para qualquer texto (o verificar confere). */
 .logo-rodape { position: absolute; left: var(--margem); bottom: 104px; height: 64px; }
-.arraste { position: absolute; right: var(--margem); bottom: 122px; font-size: 15px; letter-spacing: var(--tracking-meta); text-transform: uppercase; color: var(--bruma); }
-.marca-dagua { position: absolute; right: 64px; top: 64px; width: 64px; opacity: .72; }
+.arraste { position: absolute; right: var(--margem); bottom: 122px; font-size: 20px; letter-spacing: var(--tracking-meta); text-transform: uppercase; color: var(--bruma); }
+/* Mosquinha: o símbolo Dz pequeno. Uma logo só por tela: com .marca-dagua, não use .logo-rodape (o verificar acusa). */
+.marca-dagua { position: absolute; right: 64px; top: 64px; width: 72px; opacity: .85; }

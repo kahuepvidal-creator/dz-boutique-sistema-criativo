@@ -46,6 +46,10 @@ const problemas = await page.evaluate(({ RESPIRO_LOGO, MARGEM_SEGURA }) => {
         out.push(`${n}: texto encostado na borda ou cortado: "${txt}".`);
       if (/—/.test(e.textContent)) out.push(`${n}: travessão (—) no texto: "${txt}". Use vírgula, ponto ou dois-pontos.`);
     }
+    // Uma logo só por tela: mosquinha (.marca-dagua) OU logo do rodapé.
+    if (p.querySelector('.marca-dagua') && p.querySelector('.logo-rodape')) out.push(`${n}: duas logos na mesma tela (mosquinha e logo do rodapé). Deixe uma só.`);
+    // Legibilidade (público de 40 a 60+): nenhum texto abaixo de 20 px.
+    textos.forEach(e => { const fs = parseFloat(getComputedStyle(e).fontSize); if (fs < 20) out.push(`${n}: texto pequeno demais (${Math.round(fs)} px, mínimo 20): "${e.textContent.trim().slice(0, 40)}".`); });
     const logo = p.querySelector('.logo-rodape');
     if (logo) {
       const L = logo.getBoundingClientRect();

@@ -17,7 +17,7 @@ Pasta com tudo o que a Dz Boutique Imobiliária produz para a marca: posts e car
 |---|---|
 | `DESIGN.md` | a marca: cores, fontes, logo, fundos, voz e o que nunca fazer |
 | `marca/` | `tokens.css`, `componentes.css`, logos, fontes, fundo 3D, ícones, fotos, quadros de bairro e `dados.json` (empresa e equipe) |
-| `pecas/` | as peças em HTML. `_modelos/` é a base de cada formato; `posts/`, `carrosseis/`, `stories/` são as peças feitas |
+| `pecas/` | as peças em HTML. `_modelos/` é a base de cada formato (`carrossel-editorial.html` é o padrão de conteúdo de marca); `posts/`, `carrosseis/`, `stories/` são as peças feitas |
 | `exemplos/` | peças aprovadas pela marca (carrossel Quem somos, capas, avatares, cartões) |
 | `guias/` | como pedir e checklist de entrega |
 | `videos/` | um imóvel por pasta, para a skill `video-imovel` |
@@ -38,7 +38,9 @@ Pasta com tudo o que a Dz Boutique Imobiliária produz para a marca: posts e car
 - Nome sempre **Dz Boutique Imobiliária**, com z minúsculo. Contatos e CRECI só de `marca/dados.json`.
 - **Logo do rodapé no lugar padrão (`.logo-rodape`) e nenhum texto a menos de 96 px dele.** Já aconteceu de um título encostar no logo da capa; o `verificar` agora acusa.
 - Logo com contraste: dourado-areia no escuro, dourado-escuro-cagarras no claro.
-- Fundo tridimensional = `marca/fundos/relevo-3d.jpg` (`.fundo-3d`). Nunca curvas de nível chapadas ou mapa como fundo de peça institucional.
+- **Textura da marca** = curvas de nível finas sobre Areia (`marca/fundos/textura-curvas-*.svg`). Toda `.peca.claro` já sai com ela. Fundo 3D = `marca/fundos/relevo-3d.jpg` (`.fundo-3d`), para as peças escuras. Veja "Como o time chama cada coisa" no `DESIGN.md`.
+- **Conteúdo de marca segue a Direção editorial (estilo Casa Vogue) do `DESIGN.md`** e parte de `pecas/_modelos/carrossel-editorial.html`: título enorme, foto de lifestyle, Areia com textura, muito respiro, botão em contorno.
+- **Uma logo só por tela** (mosquinha ou logo do rodapé). Texto nunca abaixo de 20 px: o público tem de 40 a 60+ anos.
 - Ouro só em linha, losango, monograma e uma palavra de destaque. Nunca fundo chapado.
 - Nunca inventar metragem, preço, quartos, endereço, CRECI ou depoimento. Texto do anúncio é da equipe: copie igual. Se você escrever algum texto, avise.
 - Foto de abertura do imóvel é a mais forte (terraço, mar, sala com luz). Nada de rua ou fachada na abertura. Nunca foto com decoração por IA.

@@ -99,17 +99,60 @@ Arquivos em `marca/icones/`.
 ## Tipografia
 
 - **Títulos:** Cormorant Garamond Light, grande, entrelinha apertada (1.04). Uma palavra ou um nome de rua pode ir em itálico Arpoador (`<em>`). No máximo um destaque por título.
-- **Textos:** Fahkwang Light, 26 a 32 px no feed.
+- **Textos:** Fahkwang Light, 34 px no feed (mínimo 28 px). Rótulos e botões em Fahkwang Regular ou Medium.
 - **Metadados e bairros:** Fahkwang em caixa alta com espaçamento .24em, pequeno, nos cantos (`.meta`) ou antes do título (`.bairro`, com o losango ◆ em ouro).
 - **Pinyon Script:** só para nomes de água no mapa. Nunca em título.
 
-## Fundos
+## Fundos e textura
 
-- **Fundo 3D** (`.fundo-3d`): o render de relevo azul em `marca/fundos/relevo-3d.jpg`, com véu Cagarras. É o fundo tridimensional da marca para capas, frases, papelaria e avatares.
-- **Não use** curvas de nível chapadas, linhas de topografia soltas nem mapa como fundo de peça institucional. A cliente pediu isso explicitamente.
-- **Monograma como textura** (`.textura-monograma`): grande, cortado na borda, tom sobre tom (opacidade ~10%). Preenche capas sem disputar com o texto.
-- **Areia lisa** (`.peca.claro`) para respiro, fechamento e peças de leitura.
+- **Textura da marca** (curvas de nível finas, tom sobre tom): `marca/fundos/textura-curvas-areia-*.svg`. **Toda peça clara (`.peca.claro`) já sai com ela**, sem precisar pedir. É a assinatura visual das peças em Areia. Em caixa ou bloco (por exemplo, a caixa do título de um anúncio), use `class="textura-curvas"`. Para tirar numa tela, `class="peca claro lisa"`. Versão para o escuro, só quando pedirem: `<div class="textura-escura"></div>`.
+- **Fundo 3D** (`.fundo-3d`): o render de relevo azul em `marca/fundos/relevo-3d.jpg`, com véu Cagarras. É o fundo das peças escuras de destaque (capa, frase, papelaria, avatar).
+- **A textura não é o fundo 3D.** Não troque o fundo 3D por linhas nas peças escuras, e nunca use curvas grossas, contrastadas ou mapa de ruas como fundo.
+- **Monograma como textura** (`.textura-monograma`): grande, cortado na borda, tom sobre tom, só no escuro. No claro, a textura de curvas já faz esse papel.
 - **Quadros de bairro** (`marca/quadros-bairros/`): mapa do bairro em 4:5, azul (dia a dia) ou dourado (lançamento, exclusivo, data da marca). `q-` tem o nome do bairro; `qs-` é sem nome. Usar em posts de bairro e no fechamento do anúncio, não como fundo de frase.
+- Fundos prontos para Canva e outros programas: exporte uma `.peca.claro` vazia, ou use os SVG de `marca/fundos/`.
+
+### Como o time chama cada coisa
+
+| O time fala | É |
+|---|---|
+| "textura da marca" | as curvas de nível finas sobre Areia (`textura-curvas`) |
+| "fundo 3D", "mapa 3D" | o render de relevo azul (`fundo-3d`) |
+| "mosquinha" | o símbolo Dz pequeno no canto (`marca-dagua`) |
+| "mapa", "quadro do bairro" | os quadros de `marca/quadros-bairros/` |
+| "selo" | o selo redondo com o monograma (`dz-boutique-selo-*`) |
+
+## Direção editorial (estilo Casa Vogue)
+
+As peças de marca da Dz parecem **páginas de revista de casa e arquitetura** (Casa Vogue, Vogue), não post de imobiliária. A referência direta é o site novo da Dz (Figma "DZ IMOB_Projeto de Site"), principalmente as seções *A Zona Sul como estilo de vida*, *A Zona Sul por diferentes perspectivas* (coleções) e os cards de vídeo. Modelo pronto: `pecas/_modelos/carrossel-editorial.html`.
+
+**O que faz parecer revista**
+- **Título enorme** em Cormorant (`.titulo-editorial`, 120 a 150 px), com uma foto de lifestyle **encaixada entre as linhas** do título ("A Zona Sul / [foto] como / *estilo de vida.*").
+- **Sobrelinha** antes do título: fio curto dourado + rótulo em caixa alta (`.sobrelinha`: "—— QUEM SOMOS").
+- **Muito respiro.** Um assunto por tela. Margens largas, nada encostado.
+- **Página só de foto**, sangrada, com **crédito pequeno** no pé, como em revista (`.credito`: "ORLA · FIM DE TARDE").
+- **Parágrafo de revista** em serifa grande (`.paragrafo-editorial`), com uma palavra em itálico dourado.
+- **Aspas grandes** para manifesto ou fala real da Dani (`.aspas`). Nunca invente fala.
+- **Coleção**: bloco de cor em cima (Cagarras, Atlântico, Ultramar ou Areia), foto embaixo, número "◇ 01", nome grande à direita ("Pé na areia", "Entre o verde", "Na Lagoa"), descrição curta à esquerda e "Ver imóveis →".
+- **Botão em contorno** (`.botao-contorno`), nunca preenchido.
+- **Etiqueta do imóvel** como no site (`.etiqueta`): "◆ LEBLON" em ouro, o título, e a linha "130 M² · 3 SUÍTES · 2 VAGAS".
+- **Equilíbrio de cor:** Areia com textura é o padrão do conteúdo de marca. Azul entra como bloco ou página de respiro, não em todas as telas. O feed não pode ficar "todo azul".
+
+**Fotografia de lifestyle**
+- Gente vivendo o Rio: caminhar no calçadão, mar, vento, linho e seda, café na rua, luz de fim de tarde. Movimento, curva, o "borogodó" carioca. Referências de moda: Animal, Borrô, Osklen e Vogue.
+- Foto de imóvel é sempre real. Foto de lifestyle pode ser de banco de imagem, desde que pareça real e carioca.
+
+**O que não copiar do site**
+- Texto pequeno ou fino demais: o público tem de 40 a 60+ anos.
+- Travessão, "propriedades", "alugar" (a Dz não aluga) e texto genérico de IA.
+- Selo com "Rio de Janeiro" (o selo da Dz não tem).
+
+## Legibilidade (público de 40 a 60+ anos)
+
+- Texto corrido com no mínimo 28 px (padrão 34 px). Rótulos em caixa alta com no mínimo 20 px. O `verificar` acusa texto abaixo de 20 px.
+- Fahkwang pequena fica serrilhada: em rótulo e botão, use peso 400 ou 500, nunca 300.
+- Texto nunca sobre área da foto que se confunda com ele: use o degradê ou a caixa Areia.
+- **Uma logo só por tela:** a mosquinha (`.marca-dagua`) **ou** o logo do rodapé. O `verificar` acusa as duas juntas.
 
 ## Fotografia
 
@@ -143,5 +186,6 @@ O feed alterna, a cada três posts: **uma foto forte de imóvel, um quadro de ba
 - Usar preto, branco puro, gradiente colorido, brilho, neon ou sombra pesada.
 - Ouro como fundo chapado.
 - Logo encostado no texto ou fora do lugar padrão.
-- Mapa ou curvas de nível no lugar do fundo 3D.
+- Linhas no lugar do fundo 3D nas peças escuras, ou curvas grossas e contrastadas. (A textura fina sobre Areia é a marca e vai em toda peça clara.)
+- Duas logos na mesma tela (mosquinha + logo do rodapé).
 - Escrever "DZ" com Z maiúsculo.

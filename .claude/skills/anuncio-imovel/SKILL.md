@@ -17,7 +17,8 @@ Precisa de: **código, bairro, rua ou referência, tipologia e metragem como est
    - Fotos reais. Nunca use versões com decoração por IA.
    Diga quais escolheu e por quê, em uma linha cada.
 2. **Monte o carrossel.** Copie `pecas/_modelos/imovel-feed.html` para `pecas/posts/<codigo>-<bairro>.html`.
-   - Tela 1: foto de abertura com `.bairro` + título curto (o que o imóvel tem de melhor: vista, terraço, quadra da praia).
+   - Tela 1: foto de abertura com a **etiqueta** no padrão do site (`.etiqueta`: `.bairro` + título curto + `.linha` com metragem, suítes e vagas como na ficha) e **só a mosquinha** no canto. Sem logo do rodapé nessa tela.
+   - Estética: editorial (veja **Direção editorial** no `DESIGN.md`). Nada de tarja azul dura sobre a foto: use o degradê ou uma caixa Areia com `textura-curvas`. Botão em contorno.
    - Telas de foto: a foto inteira (`.foto`, sem texto, ou com uma legenda curta).
    - Ficha: tipologia e metragem **exatamente** como na ficha.
    - Bairro: quadro de `marca/quadros-bairros/` (azul no dia a dia; dourado só para lançamento ou exclusivo).
